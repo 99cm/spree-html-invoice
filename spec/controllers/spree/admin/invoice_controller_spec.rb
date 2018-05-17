@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Spree::Admin::InvoiceController, type: :controller do
+RSpec.describe Spree::Admin::InvoiceController, type: :controller do
 
   describe "GET 'lasku'" do
 
