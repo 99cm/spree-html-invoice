@@ -4,9 +4,9 @@
     <col/>
   </colgroup>
   <tr>
-    <td class="sku bold"><%= Spree.t(:sku) unless @receipt %></td>
-    <td class="desc bold"><%= Spree.t(:item_description) %></td>
-    <td class="qty bold"><%= Spree.t(:qty) %> </td>
+    <td class="sku bold"><%= t('spree.sku') unless @receipt %></td>
+    <td class="desc bold"><%= t('spree.item_description') %></td>
+    <td class="qty bold"><%= t('spree.qty') %> </td>
   </tr>
   <% @order.line_items.each do |item| %>
     <tr>
