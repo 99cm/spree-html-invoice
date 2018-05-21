@@ -8,11 +8,11 @@ module SpreeHtmlInvoice
     engine_name 'spree_html_invoice'
     config.autoload_paths += %W(#{config.root}/lib)
 
-    initializer "spree_html_invoice.assets.precompile", :after => "spree.assets.precompile" do |app|
+    initializer "spree_html_invoice.assets.precompile", after: "spree.assets.precompile" do |app|
       app.config.assets.precompile += [ "admin/html-invoice.css", "admin/html-receipt.css" ]
     end
 
-    initializer "spree.spree_html_invoice.preferences", :after => "spree.environment" do |app|
+    initializer "spree.spree_html_invoice.preferences", before: :load_config_initializers, after: "spree.environment" do |app|
       Spree::HtmlInvoice::Config = Spree::HtmlInvoiceConfiguration.new
     end
 
