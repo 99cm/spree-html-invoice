@@ -4,8 +4,8 @@
     <td width="345">
     <div align="right">
       <p class="title"><%= I18n.t("#{params[:template]}.header") %></p>
-      <p class="bold"><%= t('spree.order_number', number: @order.number)  %></p>
-      <p class="bold"> <%= Spree.l(@order.completed_at.to_date) if @order.completed_at %></p>
+      <p class="bold"><%= t('spree.order_number', number: @order.number) %></p>
+      <p class="bold"> <%= t('spree.order_date') %>: <%= Spree.l(@order.completed_at.to_date) if @order.completed_at %></p>
     </div></td>
   </tr>
 </table>
