@@ -9,7 +9,7 @@ require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rspec/rails'
 require 'database_cleaner'
 require 'ffaker'
-require 'factory_girl'
+require 'factory_bot'
 require 'rails-controller-testing'
 # Requires factories and other useful helpers defined in spree_core.
 require 'spree/testing_support/authorization_helpers'
